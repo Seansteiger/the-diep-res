@@ -38,7 +38,7 @@ export default async function PropertyDetail({ params }: Props) {
             <div className="relative h-[60vh] w-full">
                 <img
                     src={property.coverImage}
-                    alt={property.name}
+                    alt={`Exterior view of ${property.name}`}
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-black/30" />
@@ -85,7 +85,7 @@ export default async function PropertyDetail({ params }: Props) {
                                     <div key={i} className="relative aspect-square rounded-xl overflow-hidden group">
                                         <img
                                             src={img}
-                                            alt={`${property.name} ${i + 1}`}
+                                            alt={`Gallery image ${i + 1} of ${property.name}`}
                                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                         />
                                     </div>
