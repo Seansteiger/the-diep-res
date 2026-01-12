@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, MapPin, Wifi } from "lucide-react";
 import { Property } from "@/lib/data";
-import { cn } from "@/lib/utils";
+import { cn, BASE_PATH } from "@/lib/utils";
 
 interface LocationCardProps {
     property: Property;
@@ -24,7 +24,7 @@ export function LocationCard({ property, index }: LocationCardProps) {
                 <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110">
                     <div
                         className="h-full w-full bg-cover bg-center"
-                        style={{ backgroundImage: `url('${property.coverImage}')` }}
+                        style={{ backgroundImage: `url('${BASE_PATH}${property.coverImage}')` }}
                     />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />

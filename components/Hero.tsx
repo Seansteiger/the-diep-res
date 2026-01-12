@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { HERO_IMAGE } from "@/lib/data";
 
+import { BASE_PATH } from "@/lib/utils";
+
 export function Hero() {
     const scrollToBooking = () => {
         const element = document.getElementById("booking-section");
@@ -15,7 +17,7 @@ export function Hero() {
             {/* Background Image with Overlay */}
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url('${HERO_IMAGE}')` }}
+                style={{ backgroundImage: `url('${BASE_PATH}${HERO_IMAGE}')` }}
             >
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" /> {/* Ambient Gradient overlay */}
             </div>
