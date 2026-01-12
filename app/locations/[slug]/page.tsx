@@ -36,6 +36,7 @@ export default async function PropertyDetail({ params }: Props) {
 
             {/* Hero Image */}
             <div className="relative h-[60vh] w-full">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                     src={property.coverImage}
                     alt={`Exterior view of ${property.name}`}
@@ -83,6 +84,7 @@ export default async function PropertyDetail({ params }: Props) {
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                                 {property.images.map((img, i) => (
                                     <div key={i} className="relative aspect-square rounded-xl overflow-hidden group">
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img
                                             src={img}
                                             alt={`Gallery image ${i + 1} of ${property.name}`}
