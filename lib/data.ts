@@ -29,7 +29,7 @@ export const properties: Property[] = [
       "On-property caretaker",
     ],
     coverImage: "/assets/Res@Kew images/8.jpeg", // Using image 8 as requested for tile
-    images: Array.from({ length: 12 }, (_, i) => `/assets/Res@Kew images/${i + 1}.jpeg`), // Assuming 1-12.jpeg exists
+    images: Array.from({ length: 11 }, (_, i) => `/assets/Res@Kew images/${i + 1}.jpeg`), // Images 1-11.jpeg exist
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.4578857421875!2d27.995!3d-26.183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDEwJzU4LjgiUyAyN8KwNTknNDIuMCJF!5e0!3m2!1sen!2sza!4v1620000000000!5m2!1sen!2sza", // Placeholder embed
   },
   {
