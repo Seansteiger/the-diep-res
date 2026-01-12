@@ -3,7 +3,6 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { properties } from "@/lib/data";
 import { ArrowLeft, CheckCircle, MapPin } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -37,12 +36,10 @@ export default async function PropertyDetail({ params }: Props) {
 
             {/* Hero Image */}
             <div className="relative h-[60vh] w-full">
-                <Image
+                <img
                     src={property.coverImage}
                     alt={property.name}
-                    fill
-                    className="object-cover"
-                    priority
+                    className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-black/30" />
                 <div className="absolute bottom-0 left-0 p-8 container mx-auto">
@@ -86,12 +83,10 @@ export default async function PropertyDetail({ params }: Props) {
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                                 {property.images.map((img, i) => (
                                     <div key={i} className="relative aspect-square rounded-xl overflow-hidden group">
-                                        <Image
+                                        <img
                                             src={img}
                                             alt={`${property.name} ${i + 1}`}
-                                            fill
-                                            className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                            sizes="(max-width: 768px) 50vw, 33vw"
+                                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                         />
                                     </div>
                                 ))}
